@@ -1,0 +1,22 @@
+type: object
+properties:
+  name:
+    type: string
+    description: The name of the region.
+  districts:
+    type: object
+    additionalProperties:
+      $ref: './district.yaml'
+  corps:
+    type: {}
+    description: NOT YET DOCUMENTED
+  municipalities:
+    type: object
+    description: Map of municipality IDs (used in the response) to their names.
+    additionalProperties:
+      type: string
+  conties:
+    type: object
+    description: Map of country IDs (used in the response) to their names.
+    additionalProperties:
+      type: string

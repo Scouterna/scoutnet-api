@@ -1,0 +1,38 @@
+type: object
+properties:
+  checked_in:
+    type: array
+    items:
+      type: number
+    description: List of member IDs that were checked in.
+  checked_out_attended:
+    type: array
+    items:
+      type: number
+    description: List of member IDs that were checked out and marked as attended.
+  checked_out_not_attended:
+    type: array
+    items:
+      type: number
+    description: List of member IDs that were checked out and marked as not attended.
+  unchanged:
+    type: array
+    items:
+      type: number
+    description: List of member IDs that were not changed. If only a comment was added, the member is still in this list.
+  not_found:
+    type: array
+    items:
+      type: number
+    description: List of member IDs that exist but are not participants on the project.
+  no_member:
+    type: array
+    items:
+      type: number
+    description: List of member IDs that do not exist in the system.
+  total:
+    type: number
+    description: Total number of members that were processed. Unchanged members are counted as well.
+  updated_questions:
+    type: {}
+    description: NOT YET DOCUMENTED

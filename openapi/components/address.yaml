@@ -1,0 +1,28 @@
+type: object
+properties:
+  care_of:
+    type: string
+  location_name:
+    type: string
+  line_1:
+    type: string
+  line_2:
+    type: string
+  line_3:
+    type: string
+  post_code:
+    type: string
+  post_town:
+    type: string
+  latitude:
+    type: string
+  longitude:
+    type: string
+  info:
+    type: string
+  country_code:
+    type: string
+  section_name:
+    type: string
+  section_priority:
+    type: boolean

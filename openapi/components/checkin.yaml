@@ -1,0 +1,15 @@
+type: object
+properties:
+  checked_in:
+    type: number
+    enum: [0, 1]
+    description: Set to 1 to mark the participant as checked in, 0 to mark as checked out.
+  comment:
+    type: string
+    description: A comment to be stored with the check-in. If checked_in is not provided a comment will be stored without changing the check-in state.
+  attended:
+    type: number
+    enum: [0, 1]
+    default: 1
+    description: Only applicable when checking out. Set to 1 to mark the participant as attended, 0 to mark as not attended. Default is 1.
+  

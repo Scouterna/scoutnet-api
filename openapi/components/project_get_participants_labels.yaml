@@ -1,0 +1,18 @@
+type: object
+properties:
+  member_status:
+    type: object
+    additionalProperties:
+      type: string
+  sex:
+    type: object
+    additionalProperties:
+      type: string
+  project_fee:
+    type: object
+    additionalProperties:
+      type: string
+  contact_type:
+    type: object
+    additionalProperties:
+      type: string

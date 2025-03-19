@@ -1,0 +1,81 @@
+type: object
+properties:
+  checked_in:
+    type: [boolean, 'null']
+  attended:
+    type: [boolean, 'null']
+  cancelled:
+    type: [boolean, 'null']
+  member_status:
+    type: [number, 'null']
+  member_no:
+    type: [number, 'null']
+  group_registration:
+    type: [boolean, 'null']
+  first_name:
+    type: [string, 'null']
+  last_name:
+    type: [string, 'null']
+  ssno:
+    type: [string, 'null']
+  registration_date:
+    type: [string, 'null']
+  cancelled_date:
+    type: [string, 'null']
+  primary_email:
+    type: [string, 'null']
+  fee_id:
+    type: [number, 'null']
+  primary_membership_info:
+    type: [object, array, 'null']
+    properties:
+      patrol_id:
+        type: [number, 'null']
+      patrol_name:
+        type: [string, 'null']
+      troop_id:
+        type: [number, 'null']
+      troop_name:
+        type: [string, 'null']
+      group_id:
+        type: [number, 'null']
+      group_name:
+        type: [string, 'null']
+      district_id:
+        type: [number, 'null']
+      district_name:
+        type: [string, 'null']
+      region_id:
+        type: [number, 'null']
+      region_name:
+        type: [string, 'null']
+      organisation_id:
+        type: [number, 'null']
+      organisation_name:
+        type: [string, 'null']
+  group_registration_info:
+    type: [object, arary, 'null']
+    properties:
+      group_id:
+        type: [number, 'null']
+      patrol_id:
+        type: [number, 'null']
+      group_name:
+        type: [string, 'null']
+      org_id:
+        type: [number, 'null']
+      org_name:
+        type: [string, 'null']
+      district_id:
+        type: [number, 'null']
+      district_name:
+        type: [string, 'null']
+      patrol_name:
+        type: [string, 'null']
+  questions:
+    type: {}
+    description: NOT YET DOCUMENTED
+  contact_info:
+    type: object
+    additionalProperties:
+      type: string

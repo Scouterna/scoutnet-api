@@ -1,0 +1,26 @@
+type: object
+properties:
+  body_key:
+    type: string
+    description: Unique key for the body. Usually body type and body ID separated by an underscore.
+  body_name:
+    type: string
+    description: The name of the body.
+  body_type:
+    type: string
+    enum:
+      - organisation
+      - region
+      - network
+      - district
+      - corps
+      - group
+      - troop
+      - patrol
+  body_id:
+    type: number
+    description: ID of the body.
+  organisation_id:
+    type: number
+    description: ID of the organisation this body belongs to. If this body is an organisation, this is the same as body_id.
+  

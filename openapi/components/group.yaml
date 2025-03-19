@@ -1,0 +1,69 @@
+type: object
+properties:
+  name:
+    type: string
+    description: The name of the group.
+  description:
+    type: string
+    description: A description of the group.
+  group_no:
+    type: number
+    description: Group ID number.
+  corps_id:
+    type: number
+    description: Corps or "samverkansorganisation". `null` means Scouterna.
+  group_types:
+    type: array
+    items:
+      type: number
+    description: |
+      1: Scoutkår
+      2: Sjöscoutkår
+      3: Hub-Kår
+  troop_types:
+    type: array
+    items:
+      type: number
+    description: |
+      1: Bäverscouter
+      2: Spårarscouter
+      3: Upptäckarscouter
+      4: Äventyrarscouter
+      5: Utmanarscouter
+      6: Roverscouter
+      7: Annat
+      8: Familjescouter
+  municipality_id:
+    type: number
+    description: Municipality ID. Name can be found in the region object.
+  county_id:
+    type: number
+    description: County ID. Name can be found in the region object.
+  public_registration_enabled:
+    type: boolean
+    description: Whether the group is open for new members or not.
+  destination_list:
+    type: number
+    description: |
+      Destination list for public registration.
+      1: Medlemskap som väntar på godkännande
+      2: Flytta till väntelista
+  badges:
+    type: {}
+    description: NOT YET DOCUMENTED
+  addresses:
+    type: object
+    additionalProperties:
+      $ref: './address.yaml'
+  email:
+    type: object
+    additionalProperties:
+      type: string
+  email_membership:
+    type: object
+    additionalProperties:
+      type: string
+  project_stats:
+    type: object
+    additionalProperties:
+      $ref: './project_stats.yaml'

@@ -1,0 +1,11 @@
+type: object
+properties:
+  project_id:
+    type: number
+  group_participants:
+    type: number
+  project_name:
+    type: string
+  questions:
+    type: {}
+    description: NOT YET DOCUMENTED

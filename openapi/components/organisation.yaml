@@ -1,0 +1,9 @@
+type: object
+properties:
+  name:
+    type: string
+    description: The name of the organisation.
+  regions:
+    type: object
+    additionalProperties:
+      $ref: './region.yaml'
