@@ -25,7 +25,7 @@ npm i @scouterna/scoutnet
 ### Creating the client
 
 You must always start by creating an instance of the API client. This ensures
-all requests will be fully type safe. When instantiating the client you 
+all requests will be fully type safe.
 
 ```ts
 const client = createClient();
