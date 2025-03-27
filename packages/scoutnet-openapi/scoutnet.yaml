@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Scoutnet API
-  version: 0.1.0
+  version: 0.1.1
   license:
     name: MIT
     identifier: MIT
@@ -20,7 +20,9 @@ components:
     basicAuth:
       type: http
       scheme: basic
-      description: Use the ID of the resource you're accessing as username and the corresponding API key as password.
+      description: >-
+        Use the ID of the resource you're accessing as username and the
+        corresponding API key as password.
   responses:
     NotAuthorized:
       description: When unauthorized there will be no response body.
