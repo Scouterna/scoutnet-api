@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.0...scoutnet-v0.3.1) (2025-03-27)
+
+
+### Bug Fixes
+
+* add jsdoc to createAuthorizationHeader ([9441e0d](https://github.com/Scouterna/scoutnet-api/commit/9441e0dd0b20fbadc7dd91d70c39539c9b3c0c87))
+
 ## [0.3.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.2.0...scoutnet-v0.3.0) (2025-03-27)
 
 
