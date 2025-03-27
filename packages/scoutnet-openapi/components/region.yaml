@@ -12,11 +12,11 @@ properties:
     description: NOT YET DOCUMENTED
   municipalities:
     type: object
-    description: Map of municipality IDs (used in the response) to their names.
+    description: Key-value map of municipality IDs (used in the response) to their names.
     additionalProperties:
       type: string
   conties:
     type: object
-    description: Map of country IDs (used in the response) to their names.
+    description: Key-value map of country IDs (used in the response) to their names.
     additionalProperties:
       type: string
