@@ -16,8 +16,11 @@
           "path": "scoutnet.yaml",
           "jsonpath": "$.info.version"
         }
-      ]
+      ],
+      "initial-version": "0.1.0"
     },
-    "packages/scoutnet": {}
+    "packages/scoutnet": {
+      "initial-version": "0.1.0"
+    }
   }
 }
