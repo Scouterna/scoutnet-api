@@ -30,6 +30,9 @@ const base64encode = (data: string) => {
   return window.btoa(data);
 };
 
+/**
+ * Creates an authorization header for the Scoutnet API.
+ */
 export const createAuthorizationHeader = ({
   resourceId,
   key: token,
