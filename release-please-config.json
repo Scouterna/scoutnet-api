@@ -10,6 +10,7 @@
   ],
   "packages": {
     "packages/scoutnet-openapi": {
+      "component": "@scoutnet/scoutnet-openapi",
       "extra-files": [
         {
           "type": "yaml",
@@ -20,6 +21,7 @@
       "initial-version": "0.1.0"
     },
     "packages/scoutnet": {
+      "component": "@scoutnet/scoutnet",
       "initial-version": "0.1.0"
     }
   }
