@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.2...scoutnet-openapi-v0.1.3) (2025-03-27)
+
+
+### Bug Fixes
+
+* add translation to destination_list ([725952a](https://github.com/Scouterna/scoutnet-api/commit/725952a044a9c1b9769e76b36c9db192566dfce6))
+
 ## [0.1.2](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.1...scoutnet-openapi-v0.1.2) (2025-03-27)
 
 

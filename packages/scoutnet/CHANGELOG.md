@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.1...scoutnet-v0.3.2) (2025-03-27)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.1.3
+
 ## [0.3.1](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.0...scoutnet-v0.3.1) (2025-03-27)
 
 
