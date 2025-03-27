@@ -20,7 +20,7 @@ components:
     basicAuth:
       type: http
       scheme: basic
-      description: Use resource ID as username and API key as password.
+      description: Use the ID of the resource you're accessing as username and the corresponding API key as password.
   responses:
     NotAuthorized:
       description: When unauthorized there will be no response body.
