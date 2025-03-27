@@ -1,8 +1,8 @@
 openapi: 3.1.0
 info:
   title: Scoutnet API
-  version: 0.0.0
-  license: 
+  version: 0.1.0
+  license:
     name: MIT
     identifier: MIT
 tags:
@@ -24,17 +24,20 @@ components:
   responses:
     NotAuthorized:
       description: When unauthorized there will be no response body.
-
 security:
   - basicAuth: []
-
 paths:
   /body_key_list:
     get:
-      summary: Restricted endpoint. Get a list of all bodies and their relations to each other
-      description: For security reasons this endpoint is not publicly available and can only be used by internally developed systems.
+      summary: >-
+        Restricted endpoint. Get a list of all bodies and their relations to
+        each other
+      description: >-
+        For security reasons this endpoint is not publicly available and can
+        only be used by internally developed systems.
       operationId: listBodies
-      tags: [global]
+      tags:
+        - global
       responses:
         '200':
           content:
@@ -42,32 +45,34 @@ paths:
               schema:
                 type: object
                 additionalProperties:
-                  $ref: './components/body.yaml'
+                  $ref: ./components/body.yaml
         '401':
           $ref: '#/components/responses/NotAuthorized'
-
   /project/get/groups:
     get:
       summary: Get a list of groups with members attending a project
       operationId: getProjectGroups
-      tags: [project]
+      tags:
+        - project
       responses:
         '200':
-          description: Keys of the response object are group IDs and values are group objects.
+          description: >-
+            Keys of the response object are group IDs and values are group
+            objects.
           content:
             application/json:
               schema:
                 type: object
                 additionalProperties:
-                  $ref: './components/organisation.yaml'
+                  $ref: ./components/organisation.yaml
         '401':
           $ref: '#/components/responses/NotAuthorized'
-
   /project/get/participants:
     get:
       summary: Get a list of members who are registered on the project
       operationId: getProjectParticipants
-      tags: [project]
+      tags:
+        - project
       responses:
         '200':
           content:
@@ -76,33 +81,38 @@ paths:
                 type: object
                 properties:
                   participants:
-                    type: [object, array, 'null']
+                    type:
+                      - object
+                      - array
+                      - 'null'
                     additionalProperties:
-                      $ref: './components/project_member.yaml'
+                      $ref: ./components/project_member.yaml
                   labels:
-                    $ref: './components/project_get_participants_labels.yaml'
+                    $ref: ./components/project_get_participants_labels.yaml
         '401':
           $ref: '#/components/responses/NotAuthorized'
-
   /project/checkin:
     put:
       summary: Update the check-in state of participant(s) on the project
       operationId: updateCheckin
-      tags: [project]
+      tags:
+        - project
       requestBody:
-        description: An object where the keys are member IDs and the values are objects with check-in details.
+        description: >-
+          An object where the keys are member IDs and the values are objects
+          with check-in details.
         required: true
         content:
           application/json:
             schema:
               type: object
               additionalProperties:
-                $ref: './components/checkin.yaml'
+                $ref: ./components/checkin.yaml
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: './components/checkin_response.yaml'
+                $ref: ./components/checkin_response.yaml
         '401':
           $ref: '#/components/responses/NotAuthorized'
