@@ -3,7 +3,7 @@
 This is an API client for the Scoutnet API developed and maintained by
 [Scouternas e-tjänster](https://etjanster.scout.se/). It is automatically
 generated from the
-[Scoutnet OpenAPI Document](https://github.com/Scouterna/scoutnet-api/blob/main/openapi/scoutnet.yaml).
+[Scoutnet OpenAPI Document](https://github.com/Scouterna/scoutnet-api/blob/main/packages/scoutnet-openapi/scoutnet.yaml).
 
 The client uses [openapi-typescript](https://openapi-ts.dev/introduction) and
 [openapi-fetch](https://openapi-ts.dev/openapi-fetch/) under the hood. This NPM

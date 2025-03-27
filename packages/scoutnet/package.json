@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "pnpm run build:types && pnpm run build:format && pnpm run build:typescript",
-    "build:types": "openapi-typescript ../../openapi/scoutnet.yaml -o ./src/generated/api-types.ts",
+    "build:types": "openapi-typescript ./node_modules/@scouterna/scoutnet-openapi/scoutnet.yaml -o ./src/generated/api-types.ts",
     "build:format": "biome format --write ./src/generated/api-types.ts",
     "build:typescript": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,8 @@
   "devDependencies": {
     "@types/node": "^22.10.10",
     "openapi-typescript": "^7.6.0",
-    "typescript": "~5.6.2"
+    "typescript": "~5.6.2",
+    "@scouterna/scoutnet-openapi": "workspace:^"
   },
   "dependencies": {
     "openapi-fetch": "^0.13.4"

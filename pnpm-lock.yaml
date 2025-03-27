@@ -12,25 +12,15 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
 
-  packages/debug:
-    dependencies:
-      '@scouterna/scoutnet':
-        specifier: workspace:^
-        version: link:../scoutnet
-      tsx:
-        specifier: ^4.19.3
-        version: 4.19.3
-    devDependencies:
-      '@types/node':
-        specifier: ^22.10.10
-        version: 22.10.10
-
   packages/scoutnet:
     dependencies:
       openapi-fetch:
         specifier: ^0.13.4
         version: 0.13.4
     devDependencies:
+      '@scouterna/scoutnet-openapi':
+        specifier: workspace:^
+        version: link:../scoutnet-openapi
       '@types/node':
         specifier: ^22.10.10
         version: 22.10.10
@@ -41,8 +31,13 @@ importers:
         specifier: ~5.6.2
         version: 5.6.3
 
+  packages/scoutnet-openapi: {}
+
   packages/swagger-ui:
     dependencies:
+      '@scouterna/scoutnet-openapi':
+        specifier: workspace:^
+        version: link:../scoutnet-openapi
       swagger-ui:
         specifier: ^5.18.2
         version: 5.18.2
@@ -56,6 +51,19 @@ importers:
       vite:
         specifier: ^6.0.5
         version: 6.0.11(@types/node@22.10.10)(tsx@4.19.3)
+
+  packages/testing:
+    dependencies:
+      '@scouterna/scoutnet':
+        specifier: workspace:^
+        version: link:../scoutnet
+      tsx:
+        specifier: ^4.19.3
+        version: 4.19.3
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.10
+        version: 22.10.10
 
 packages:
 
