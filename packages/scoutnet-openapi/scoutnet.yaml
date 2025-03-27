@@ -37,7 +37,7 @@ paths:
       description: >-
         For security reasons this endpoint is not publicly available and can
         only be used by internally developed systems.
-      operationId: listBodies
+      operationId: listBodyKeys
       tags:
         - global
       responses:
