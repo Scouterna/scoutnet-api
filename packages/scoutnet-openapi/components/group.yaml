@@ -46,8 +46,8 @@ properties:
     type: number
     description: |
       Destination list for public registration.
-      1: Medlemskap som väntar på godkännande
-      2: Flytta till väntelista
+      1: Medlemskap som väntar på godkännande (Membership waiting for approval)
+      2: Flytta till väntelista (Move to waiting list)
   badges:
     type: {}
     description: NOT YET DOCUMENTED
