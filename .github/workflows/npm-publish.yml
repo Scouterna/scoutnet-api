@@ -26,7 +26,9 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
 
-      # pnpm will run scripts in topological order, ensuring that dependencies are built before dependents
+      # pnpm will run scripts in topological order, ensuring that dependencies
+      # are built before dependents. This will also build packages that are
+      # irrelevant to the current release, but that's fine.
       - run: pnpm run --recursive build
       
       - if: startsWith(github.event.release.tag_name, 'scoutnet-v')
