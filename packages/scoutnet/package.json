@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Malcolm Nihlén <malcolm.nihlen@scouterna.se>",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.10.10",
