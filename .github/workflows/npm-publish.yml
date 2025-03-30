@@ -25,6 +25,9 @@ jobs:
           node-version-file: .node-version
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
+
+      # pnpm will run scripts in topological order, ensuring that dependencies are built before dependents
+      - run: pnpm run --recursive build
       
       - if: startsWith(github.event.release.tag_name, 'scoutnet-v')
         working-directory: packages/scoutnet
