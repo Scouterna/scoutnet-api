@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.5](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.4...scoutnet-v0.3.5) (2025-03-30)
+
+
+### Bug Fixes
+
+* add metadata to packages ([e2a5728](https://github.com/Scouterna/scoutnet-api/commit/e2a5728ba5ec3604f46a4d70a9ac891b399073d9))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.1.5
+
 ## [0.3.4](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.3...scoutnet-v0.3.4) (2025-03-30)
 
 
