@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.6](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.5...scoutnet-v0.3.6) (2025-03-30)
+
+
+### Bug Fixes
+
+* dummy ([a29431c](https://github.com/Scouterna/scoutnet-api/commit/a29431ce4ca49c5120e0f6855877b43c601a8a38))
+
 ## [0.3.5](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.4...scoutnet-v0.3.5) (2025-03-30)
 
 
