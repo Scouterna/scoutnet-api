@@ -5,7 +5,7 @@ on:
     types: [published]
 
 jobs:
-  build-and-publsih:
+  build-and-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
