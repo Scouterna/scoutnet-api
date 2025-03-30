@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.3...scoutnet-openapi-v0.1.4) (2025-03-30)
+
+
+### Bug Fixes
+
+* add author to public packages ([e963310](https://github.com/Scouterna/scoutnet-api/commit/e963310c54ece98eda03ea85a2bea8dd3fb98e08))
+
 ## [0.1.3](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.2...scoutnet-openapi-v0.1.3) (2025-03-27)
 
 
