@@ -1,0 +1,31 @@
+name: Publish packages to NPM
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publsih:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          registry-url: 'https://registry.npmjs.org'
+      - run: pnpm install
+      
+      - if: startsWith(github.event.release.tag_name, 'scoutnet-v')
+        working-directory: packages/scoutnet
+        run: npm publish --provenance --access public
+      
+      - if: startsWith(github.event.release.tag_name, 'scoutnet-openapi-v')
+        working-directory: packages/scoutnet-openapi
+        run: npm publish --provenance --access public
