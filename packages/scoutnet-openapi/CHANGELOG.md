@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.5...scoutnet-openapi-v0.1.6) (2025-03-30)
+
+
+### Bug Fixes
+
+* include necessary files in packages ([3b71721](https://github.com/Scouterna/scoutnet-api/commit/3b7172133a6857c0fe2d78a2cee313a241aaa1c8))
+
 ## [0.1.5](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.4...scoutnet-openapi-v0.1.5) (2025-03-30)
 
 
