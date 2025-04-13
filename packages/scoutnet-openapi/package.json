@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Scouterna/scoutnet-api.git",
+    "url": "git+https://github.com/Scouterna/scoutnet-api.git",
     "directory": "packages/scoutnet-openapi"
   },
   "files": [
