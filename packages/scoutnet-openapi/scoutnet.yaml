@@ -1,20 +1,24 @@
 openapi: 3.1.0
+
 info:
   title: Scoutnet API
   version: 0.1.6
   license:
     name: MIT
     identifier: MIT
+
 tags:
   - name: project
     description: Endpoints related to "arrangemang"
   - name: global
     description: Endpoints that do not belong to a specific type of resource
+
 servers:
   - url: https://s1.test.custard.no/api
     description: Test server
   - url: https://scoutnet.se/api
     description: Production server
+
 components:
   securitySchemes:
     basicAuth:
@@ -23,98 +27,16 @@ components:
       description: >-
         Use the ID of the resource you're accessing as username and the
         corresponding API key as password.
-  responses:
-    NotAuthorized:
-      description: When unauthorized there will be no response body.
+
 security:
   - basicAuth: []
+
 paths:
   /body_key_list:
-    get:
-      summary: >-
-        Restricted endpoint. Get a list of all bodies and their relations to
-        each other
-      description: >-
-        For security reasons this endpoint is not publicly available and can
-        only be used by internally developed systems.
-      operationId: listBodyKeys
-      tags:
-        - global
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  $ref: ./components/body.yaml
-        '401':
-          $ref: '#/components/responses/NotAuthorized'
+    $ref: ./paths/body_key_list.yaml
   /project/get/groups:
-    get:
-      summary: Get a list of groups with members attending a project
-      operationId: getProjectGroups
-      tags:
-        - project
-      responses:
-        '200':
-          description: >-
-            Keys of the response object are group IDs and values are group
-            objects.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  $ref: ./components/organisation.yaml
-        '401':
-          $ref: '#/components/responses/NotAuthorized'
+    $ref: paths/project_get_groups.yaml
   /project/get/participants:
-    get:
-      summary: Get a list of members who are registered on the project
-      operationId: getProjectParticipants
-      tags:
-        - project
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  participants:
-                    type:
-                      - object
-                      - array
-                      - 'null'
-                    additionalProperties:
-                      $ref: ./components/project_member.yaml
-                  labels:
-                    $ref: ./components/project_get_participants_labels.yaml
-        '401':
-          $ref: '#/components/responses/NotAuthorized'
+    $ref: paths/project_get_participants.yaml
   /project/checkin:
-    put:
-      summary: Update the check-in state of participant(s) on the project
-      operationId: updateCheckin
-      tags:
-        - project
-      requestBody:
-        description: >-
-          An object where the keys are member IDs and the values are objects
-          with check-in details.
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                $ref: ./components/checkin.yaml
-      responses:
-        '200':
-          content:
-            application/json:
-              schema:
-                $ref: ./components/checkin_response.yaml
-        '401':
-          $ref: '#/components/responses/NotAuthorized'
+    $ref: paths/project_checkin.yaml

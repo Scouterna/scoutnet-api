@@ -1,0 +1,24 @@
+get:
+  summary: Get a list of members who are registered on the project
+  operationId: getProjectParticipants
+  tags:
+    - project
+  responses:
+    '200':
+      description: A list of members registered on the project.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              participants:
+                type:
+                  - object
+                  - array
+                  - 'null'
+                additionalProperties:
+                  $ref: ../components/project_member.yaml
+              labels:
+                $ref: ../components/project_get_participants_labels.yaml
+    '401':
+      $ref: ../responses/not_authorized.yaml

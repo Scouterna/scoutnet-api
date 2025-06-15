@@ -1,0 +1,21 @@
+get:
+  summary: >-
+    Restricted endpoint. Get a list of all bodies and their relations to
+    each other
+  description: >-
+    For security reasons this endpoint is not publicly available and can
+    only be used by internally developed systems.
+  operationId: listBodyKeys
+  tags:
+    - global
+  responses:
+    '200':
+      description: A list of all bodies and their relations to each other.
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties:
+              $ref: ../components/body.yaml
+    '401':
+      $ref: ../responses/not_authorized.yaml

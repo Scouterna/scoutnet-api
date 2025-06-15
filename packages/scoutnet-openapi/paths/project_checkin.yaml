@@ -1,0 +1,28 @@
+put:
+  summary: Update the check-in state of participant(s) on the project
+  operationId: updateCheckin
+  tags:
+    - project
+  requestBody:
+    description: >-
+      An object where the keys are member IDs and the values are objects
+      with check-in details.
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          propertyNames:
+            pattern: '^[0-9]+$'
+            description: A valid member ID
+          additionalProperties:
+            $ref: ../components/checkin.yaml
+  responses:
+    '200':
+      description: A summary of the check-in operation.
+      content:
+        application/json:
+          schema:
+            $ref: ../components/checkin_response.yaml
+    '401':
+      $ref: ../responses/not_authorized.yaml
