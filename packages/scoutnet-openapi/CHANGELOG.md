@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.7](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.6...scoutnet-openapi-v0.1.7) (2025-06-20)
+
+
+### Bug Fixes
+
+* break out endpoints into separate files ([9f1d1b0](https://github.com/Scouterna/scoutnet-api/commit/9f1d1b076bd5a6abbed5023b51da27abeb2096fe))
+* symlink openapi document into public. ([4e11f21](https://github.com/Scouterna/scoutnet-api/commit/4e11f213eba206dd3787f03e694074b51c27cb22))
+
 ## [0.1.6](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.5...scoutnet-openapi-v0.1.6) (2025-03-30)
 
 
