@@ -1,24 +1,20 @@
 openapi: 3.1.0
-
 info:
   title: Scoutnet API
-  version: 0.1.6
+  version: 0.1.7
   license:
     name: MIT
     identifier: MIT
-
 tags:
   - name: project
     description: Endpoints related to "arrangemang"
   - name: global
     description: Endpoints that do not belong to a specific type of resource
-
 servers:
   - url: https://s1.test.custard.no/api
     description: Test server
   - url: https://scoutnet.se/api
     description: Production server
-
 components:
   securitySchemes:
     basicAuth:
@@ -27,10 +23,8 @@ components:
       description: >-
         Use the ID of the resource you're accessing as username and the
         corresponding API key as password.
-
 security:
   - basicAuth: []
-
 paths:
   /body_key_list:
     $ref: ./paths/body_key_list.yaml
