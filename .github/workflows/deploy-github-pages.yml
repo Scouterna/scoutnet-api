@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    if: startsWith(github.event.release.tag_name, 'scoutnet-openapi-')
+    if: startsWith(github.event.release.tag_name, 'scoutnet-openapi-v')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
