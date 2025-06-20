@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.9](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.8...scoutnet-v0.3.9) (2025-06-20)
+
+
+### Bug Fixes
+
+* move schema to make referencing simpler. ([a6b2708](https://github.com/Scouterna/scoutnet-api/commit/a6b27081c761261acc82df8a2978fc0a77607e8b))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.1.8
+
 ## [0.3.8](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.7...scoutnet-v0.3.8) (2025-06-20)
 
 
