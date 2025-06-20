@@ -35,8 +35,8 @@ paths:
   /body_key_list:
     $ref: ./paths/body_key_list.yaml
   /project/get/groups:
-    $ref: paths/project_get_groups.yaml
+    $ref: ./paths/project_get_groups.yaml
   /project/get/participants:
-    $ref: paths/project_get_participants.yaml
+    $ref: ./paths/project_get_participants.yaml
   /project/checkin:
-    $ref: paths/project_checkin.yaml
+    $ref: ./paths/project_checkin.yaml
