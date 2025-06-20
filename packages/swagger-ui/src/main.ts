@@ -3,5 +3,5 @@ import "swagger-ui/dist/swagger-ui.css";
 
 SwaggerUI({
   dom_id: "#app",
-  url: "./scoutnet.yaml",
+  url: "./schema/scoutnet.yaml",
 });

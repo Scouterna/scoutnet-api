@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "pnpm run build:types && pnpm run build:format && pnpm run build:typescript",
-    "build:types": "openapi-typescript ./node_modules/@scouterna/scoutnet-openapi/scoutnet.yaml -o ./src/generated/api-types.ts",
+    "build:types": "openapi-typescript ./node_modules/@scouterna/scoutnet-openapi/schema/scoutnet.yaml -o ./src/generated/api-types.ts",
     "build:format": "biome format --write ./src/generated/api-types.ts",
     "build:typescript": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"

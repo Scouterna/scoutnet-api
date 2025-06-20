@@ -14,8 +14,7 @@
     "directory": "packages/scoutnet-openapi"
   },
   "files": [
-    "components",
-    "scoutnet.yaml",
+    "schema",
     "README.md",
     "CHANGELOG.md",
     "package.json"
