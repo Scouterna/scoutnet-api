@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.7...scoutnet-openapi-v0.1.8) (2025-06-20)
+
+
+### Bug Fixes
+
+* move schema to make referencing simpler. ([a6b2708](https://github.com/Scouterna/scoutnet-api/commit/a6b27081c761261acc82df8a2978fc0a77607e8b))
+
 ## [0.1.7](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.6...scoutnet-openapi-v0.1.7) (2025-06-20)
 
 
