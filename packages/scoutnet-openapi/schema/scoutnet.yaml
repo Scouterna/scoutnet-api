@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Scoutnet API
   summary: Scoutnet is the member management system for the Guides and Scouts of Sweden.
-  description: >-
+  description: |
     Scoutnet is the member management system for the Guides and Scouts of
     Sweden. This API provides access to various resources related to projects,
     groups, and participants.
@@ -29,7 +29,7 @@ components:
     basicAuth:
       type: http
       scheme: basic
-      description: >-
+      description: |
         Use the ID of the resource you're accessing as username and the
         corresponding API key as password.
 security:

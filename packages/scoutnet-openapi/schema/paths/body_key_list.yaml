@@ -1,8 +1,8 @@
 get:
-  summary: >-
+  summary: |
     Restricted endpoint. Get a list of all bodies and their relations to
     each other
-  description: >-
+  description: |
     For security reasons this endpoint is not publicly available and can
     only be used by internally developed systems.
   operationId: listBodyKeys
