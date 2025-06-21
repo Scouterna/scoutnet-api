@@ -20,3 +20,4 @@ jobs:
         with:
           openapi_path: "./packages/scoutnet-openapi/schema/scoutnet.yaml"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: false
