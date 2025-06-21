@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - packages/scoutnet-openapi/**
+    branches-ignore:
+      - release-please-**
 
 permissions:
   contents: read
