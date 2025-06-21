@@ -1,7 +1,7 @@
 name: "Lint OpenAPI spec with vacuum"
 
 on:
-  push: {}
+  pull_request: {}
 
 permissions:
   contents: read
