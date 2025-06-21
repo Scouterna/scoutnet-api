@@ -1,11 +1,12 @@
 get:
   summary: Get a list of groups with members attending a project
+  description: Get a list of groups with members attending a project
   operationId: getProjectGroups
   tags:
     - project
   responses:
     '200':
-      description: >-
+      description: |
         Keys of the response object are group IDs and values are group
         objects.
       content:

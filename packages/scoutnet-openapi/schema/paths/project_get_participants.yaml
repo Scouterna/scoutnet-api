@@ -1,5 +1,6 @@
 get:
   summary: Get a list of members who are registered on the project
+  description: Get a list of members who are registered on the project
   operationId: getProjectParticipants
   tags:
     - project

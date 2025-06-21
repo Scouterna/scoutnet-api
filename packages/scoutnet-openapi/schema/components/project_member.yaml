@@ -54,7 +54,7 @@ properties:
       organisation_name:
         type: [string, 'null']
   group_registration_info:
-    type: [object, arary, 'null']
+    type: [object, array, 'null']
     properties:
       group_id:
         type: [number, 'null']
