@@ -15,10 +15,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - run: |
+          mv ./packages/scoutnet-openapi/schema/* ./
+
       - name: Run OpenAPI lint with vacuum
         uses: pb33f/vacuum-action@v2
         with:
-          openapi_path: "./packages/scoutnet-openapi/schema/scoutnet.yaml"
+          openapi_path: "./scoutnet.yaml"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: false
           minimum_score: 1
