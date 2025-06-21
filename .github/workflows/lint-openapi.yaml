@@ -1,0 +1,22 @@
+name: "Lint OpenAPI spec with vacuum"
+
+on:
+  push: {}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  vacuum-lint:
+    name: Lint OpenAPI document with vacuum
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run OpenAPI lint with vacuum
+        uses: pb33f/vacuum-action@v2
+        with:
+          openapi_path: "./packages/scoutnet-openapi/schema/scoutnet.yaml"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
