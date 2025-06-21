@@ -1,7 +1,9 @@
 name: "Lint OpenAPI spec with vacuum"
 
 on:
-  push: {}
+  pull_request:
+    paths:
+      - packages/scoutnet-openapi/**
 
 permissions:
   contents: read
@@ -15,8 +17,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # vacuum has issues when referenced files are not in the root directory
+      - run: mv ./packages/scoutnet-openapi/schema/* ./
+
       - name: Run OpenAPI lint with vacuum
         uses: pb33f/vacuum-action@v2
         with:
-          openapi_path: "./packages/scoutnet-openapi/schema/scoutnet.yaml"
+          openapi_path: "./scoutnet.yaml"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # The vacuum action won't post comments if the linting fails
+          fail_on_error: false
+          minimum_score: 0
