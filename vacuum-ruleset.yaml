@@ -1,0 +1,6 @@
+extends: [[vacuum:oas, recommended]]
+rules:
+  paths-kebab-case: false
+  no-http-verbs-in-path: false
+  # vacuum had issues parsing the document if we use the recommended structure
+  path-item-refs: false

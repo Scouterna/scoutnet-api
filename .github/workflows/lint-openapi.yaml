@@ -23,8 +23,9 @@ jobs:
       - name: Run OpenAPI lint with vacuum
         uses: pb33f/vacuum-action@v2
         with:
-          openapi_path: "./scoutnet.yaml"
+          openapi_path: ./scoutnet.yaml
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # The vacuum action won't post comments if the linting fails
           fail_on_error: false
           minimum_score: 0
+          ruleset: vacuum-ruleset.yaml
