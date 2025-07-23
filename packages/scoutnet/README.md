@@ -28,6 +28,8 @@ You must always start by creating an instance of the API client. This ensures
 all requests will be fully type safe.
 
 ```ts
+import { createClient } from '@scouterna/scoutnet'
+
 const client = createClient();
 ```
 
