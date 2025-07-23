@@ -1,4 +1,7 @@
-import type { ClientOptions as OpenApiClientOptions } from "openapi-fetch";
+import type {
+  Client,
+  ClientOptions as OpenApiClientOptions,
+} from "openapi-fetch";
 import openApiCreateClient from "openapi-fetch";
 
 import type { paths } from "./generated/api-types.js";
@@ -10,10 +13,12 @@ export type APICredentials = {
 
 export type ClientOptions = OpenApiClientOptions;
 
+export type ScoutnetClient = Client<paths, `application/json`>;
+
 export const createClient = ({
   baseUrl = "https://scoutnet.se/api",
   ...clientOptions
-}: ClientOptions) => {
+}: ClientOptions): ScoutnetClient => {
   const client = openApiCreateClient<paths>({
     baseUrl,
     ...clientOptions,
@@ -21,8 +26,6 @@ export const createClient = ({
 
   return client;
 };
-
-export type ScoutnetClient = ReturnType<typeof createClient>;
 
 const base64encode = (data: string) => {
   if (typeof window === "undefined") {
