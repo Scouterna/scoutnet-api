@@ -21,9 +21,8 @@
     "package.json"
   ],
   "type": "module",
-  "exports": {
-    ".": "./dist/index.js"
-  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "pnpm run build:types && pnpm run build:format && pnpm run build:typescript",
     "build:types": "openapi-typescript ./node_modules/@scouterna/scoutnet-openapi/schema/scoutnet.yaml -o ./src/generated/api-types.ts",
