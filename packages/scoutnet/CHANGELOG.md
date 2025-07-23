@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.13](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.12...scoutnet-v0.3.13) (2025-07-23)
+
+
+### Bug Fixes
+
+* set correct typescript root ([c24ccfb](https://github.com/Scouterna/scoutnet-api/commit/c24ccfb2ee2a52a2a69e8e9fa73c4ccf5fd64467))
+
 ## [0.3.12](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.11...scoutnet-v0.3.12) (2025-07-23)
 
 
