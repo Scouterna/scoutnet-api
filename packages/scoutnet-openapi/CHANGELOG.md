@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.9](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.8...scoutnet-openapi-v0.1.9) (2025-07-23)
+
+
+### Bug Fixes
+
+* fix linter issues ([#19](https://github.com/Scouterna/scoutnet-api/issues/19)) ([9e7bfa9](https://github.com/Scouterna/scoutnet-api/commit/9e7bfa9b5e76de90babd632c3e725226d2e75088))
+
 ## [0.1.8](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.7...scoutnet-openapi-v0.1.8) (2025-06-20)
 
 
