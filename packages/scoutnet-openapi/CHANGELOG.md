@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.2.0...scoutnet-openapi-v0.2.1) (2025-07-23)
+
+
+### Bug Fixes
+
+* make optional properties nullable ([c57724b](https://github.com/Scouterna/scoutnet-api/commit/c57724bbbf21a89c69bd41d98ff576aa249c32ff))
+
 ## [0.2.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.9...scoutnet-openapi-v0.2.0) (2025-07-23)
 
 
