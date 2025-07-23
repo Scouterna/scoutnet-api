@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.10](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.9...scoutnet-v0.3.10) (2025-07-23)
+
+
+### Bug Fixes
+
+* export ScoutnetClient ([ebdbbc6](https://github.com/Scouterna/scoutnet-api/commit/ebdbbc660567fddd3daf980b13d1f599c2b7206c))
+* export using main field ([ae9f945](https://github.com/Scouterna/scoutnet-api/commit/ae9f945c4ca989f9b64b89982ca7b5590c3e01c2))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.1.9
+
 ## [0.3.9](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.8...scoutnet-v0.3.9) (2025-06-20)
 
 
