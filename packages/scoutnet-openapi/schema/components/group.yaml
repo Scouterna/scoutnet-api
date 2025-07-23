@@ -1,4 +1,6 @@
 type: object
+required:
+  - group_no
 properties:
   name:
     type: string

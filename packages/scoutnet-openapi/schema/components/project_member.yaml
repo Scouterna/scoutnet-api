@@ -1,77 +1,77 @@
 type: object
 properties:
   checked_in:
-    type: [boolean, 'null']
+    type: boolean
   attended:
-    type: [boolean, 'null']
+    type: boolean
   cancelled:
-    type: [boolean, 'null']
+    type: boolean
   member_status:
-    type: [number, 'null']
+    type: number
   member_no:
-    type: [number, 'null']
+    type: number
   group_registration:
-    type: [boolean, 'null']
+    type: boolean
   first_name:
-    type: [string, 'null']
+    type: string
   last_name:
-    type: [string, 'null']
+    type: string
   ssno:
-    type: [string, 'null']
+    type: string
   registration_date:
-    type: [string, 'null']
+    type: string
   cancelled_date:
-    type: [string, 'null']
+    type: string
   primary_email:
-    type: [string, 'null']
+    type: string
   fee_id:
-    type: [number, 'null']
+    type: number
   primary_membership_info:
-    type: [object, array, 'null']
+    type: [object, array]
     properties:
       patrol_id:
-        type: [number, 'null']
+        type: number
       patrol_name:
-        type: [string, 'null']
+        type: string
       troop_id:
-        type: [number, 'null']
+        type: number
       troop_name:
-        type: [string, 'null']
+        type: string
       group_id:
-        type: [number, 'null']
+        type: number
       group_name:
-        type: [string, 'null']
+        type: string
       district_id:
-        type: [number, 'null']
+        type: number
       district_name:
-        type: [string, 'null']
+        type: string
       region_id:
-        type: [number, 'null']
+        type: number
       region_name:
-        type: [string, 'null']
+        type: string
       organisation_id:
-        type: [number, 'null']
+        type: number
       organisation_name:
-        type: [string, 'null']
+        type: string
   group_registration_info:
-    type: [object, array, 'null']
+    type: [object, array]
     properties:
       group_id:
-        type: [number, 'null']
+        type: number
       patrol_id:
-        type: [number, 'null']
+        type: number
       group_name:
-        type: [string, 'null']
+        type: string
       org_id:
-        type: [number, 'null']
+        type: number
       org_name:
-        type: [string, 'null']
+        type: string
       district_id:
-        type: [number, 'null']
+        type: number
       district_name:
-        type: [string, 'null']
+        type: string
       patrol_name:
-        type: [string, 'null']
+        type: string
   questions:
     type: {}
     description: NOT YET DOCUMENTED
