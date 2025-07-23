@@ -7,8 +7,7 @@ get:
   responses:
     '200':
       description: |
-        Keys of the response object are group IDs and values are group
-        objects.
+        Keys of the response object are group IDs and values are group objects.
       content:
         application/json:
           schema:

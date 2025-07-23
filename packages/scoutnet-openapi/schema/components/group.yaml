@@ -51,6 +51,14 @@ properties:
   badges:
     type: {}
     description: NOT YET DOCUMENTED
+  troops:
+    type: object
+    additionalProperties:
+      $ref: './group_troop.yaml'
+  sections:
+    type: object
+    additionalProperties:
+      $ref: './group_section.yaml'
   addresses:
     type: object
     additionalProperties:

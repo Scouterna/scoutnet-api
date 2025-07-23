@@ -1,0 +1,28 @@
+type: object
+properties:
+  name:
+    type: string
+    description: The name of the troop.
+  type:
+    type: number
+    description: |
+      1: Bäverscouter
+      2: Spårarscouter
+      3: Upptäckarscouter
+      4: Äventyrarscouter
+      5: Utmanarscouter
+      6: Roverscouter
+      7: Annat
+      8: Familjescouter
+  min_age:
+    type: number
+    description: Minimum age for the troop.
+  max_age:
+    type: number
+    description: Maximum age for the troop.
+  meeting_info:
+    type: {}
+    description: NOT YET DOCUMENTED
+  section_id:
+    type: number
+    description: ID of the section this troop belongs to.
