@@ -22,6 +22,8 @@ export const createClient = ({
   return client;
 };
 
+export type ScoutnetClient = ReturnType<typeof createClient>;
+
 const base64encode = (data: string) => {
   if (typeof window === "undefined") {
     return Buffer.from(data).toString("base64");
