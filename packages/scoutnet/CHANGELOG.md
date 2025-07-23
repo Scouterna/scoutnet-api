@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.12](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.11...scoutnet-v0.3.12) (2025-07-23)
+
+
+### Bug Fixes
+
+* make createClient portable ([0379f3f](https://github.com/Scouterna/scoutnet-api/commit/0379f3f152a2096deee3ad1d44e8e27a348647c1))
+* make optional properties nullable ([c57724b](https://github.com/Scouterna/scoutnet-api/commit/c57724bbbf21a89c69bd41d98ff576aa249c32ff))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.2.1
+
 ## [0.3.11](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.10...scoutnet-v0.3.11) (2025-07-23)
 
 
