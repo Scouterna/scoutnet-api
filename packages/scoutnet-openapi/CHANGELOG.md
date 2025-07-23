@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.9...scoutnet-openapi-v0.2.0) (2025-07-23)
+
+
+### Features
+
+* add troop and section support to groups endpoint ([dddaac0](https://github.com/Scouterna/scoutnet-api/commit/dddaac0ae17632fa76dc13dafb34af06044be620))
+
 ## [0.1.9](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.1.8...scoutnet-openapi-v0.1.9) (2025-07-23)
 
 
