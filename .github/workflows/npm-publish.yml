@@ -29,8 +29,8 @@ jobs:
 
       - if: startsWith(github.event.release.tag_name, 'scoutnet-v')
         working-directory: packages/scoutnet
-        run: npm publish
+        run: pnpm publish
 
       - if: startsWith(github.event.release.tag_name, 'scoutnet-openapi-v')
         working-directory: packages/scoutnet-openapi
-        run: npm publish
+        run: pnpm publish

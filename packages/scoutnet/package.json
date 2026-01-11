@@ -2,10 +2,7 @@
   "name": "@scouterna/scoutnet",
   "version": "0.3.17",
   "description": "API client for the Scoutnet API.",
-  "keywords": [
-    "scouterna",
-    "scoutnet"
-  ],
+  "keywords": ["scouterna", "scoutnet"],
   "author": "Malcolm Nihlén <malcolm.nihlen@scouterna.se>",
   "license": "MIT",
   "repository": {
@@ -13,13 +10,7 @@
     "url": "git+https://github.com/Scouterna/scoutnet-api.git",
     "directory": "packages/scoutnet"
   },
-  "files": [
-    "dist",
-    "src",
-    "README.md",
-    "CHANGELOG.md",
-    "package.json"
-  ],
+  "files": ["dist", "src", "README.md", "CHANGELOG.md", "package.json"],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -31,7 +22,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@types/node": "^22.10.10",
+    "@types/node": "^24.10.7",
     "openapi-typescript": "^7.6.0",
     "typescript": "~5.6.2",
     "@scouterna/scoutnet-openapi": "workspace:^"

@@ -22,8 +22,8 @@ importers:
         specifier: workspace:^
         version: link:../scoutnet-openapi
       '@types/node':
-        specifier: ^22.10.10
-        version: 22.10.10
+        specifier: ^24.10.7
+        version: 24.10.7
       openapi-typescript:
         specifier: ^7.6.0
         version: 7.6.0(typescript@5.6.3)
@@ -50,7 +50,7 @@ importers:
         version: 5.6.3
       vite:
         specifier: ^6.0.5
-        version: 6.0.11(@types/node@22.10.10)(tsx@4.19.3)
+        version: 6.0.11(@types/node@24.10.7)(tsx@4.19.3)
 
   packages/testing:
     dependencies:
@@ -62,8 +62,8 @@ importers:
         version: 4.19.3
     devDependencies:
       '@types/node':
-        specifier: ^22.10.10
-        version: 22.10.10
+        specifier: ^24.10.7
+        version: 24.10.7
 
 packages:
 
@@ -649,8 +649,8 @@ packages:
   '@types/hast@2.3.10':
     resolution: {integrity: sha512-McWspRw8xx8J9HurkVBfYj0xKoE25tOFlHGdx4MJ5xORQrMGZNqJhVQWaIbm6Oyla5kYOXtDiopzKRJzEOkwJw==}
 
-  '@types/node@22.10.10':
-    resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
+  '@types/node@24.10.7':
+    resolution: {integrity: sha512-+054pVMzVTmRQV8BhpGv3UyfZ2Llgl8rdpDTon+cUH9+na0ncBVXj3wTUKh14+Kiz18ziM3b4ikpP5/Pc0rQEQ==}
 
   '@types/ramda@0.30.2':
     resolution: {integrity: sha512-PyzHvjCalm2BRYjAU6nIB3TprYwMNOUY/7P/N8bSzp9W/yM2YrtGtAnnVtaCNSeOZ8DzKyFDvaqQs7LnWwwmBA==}
@@ -1209,8 +1209,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@6.20.0:
-    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
   unraw@3.0.0:
     resolution: {integrity: sha512-08/DA66UF65OlpUDIQtbJyrqTR0jTAlJ+jsnkQ4jxR7+K5g5YG1APZKQSMCE1vqqmD+2pv6+IdEjmopFatacvg==}
@@ -1939,9 +1939,9 @@ snapshots:
     dependencies:
       '@types/unist': 2.0.11
 
-  '@types/node@22.10.10':
+  '@types/node@24.10.7':
     dependencies:
-      undici-types: 6.20.0
+      undici-types: 7.16.0
 
   '@types/ramda@0.30.2':
     dependencies:
@@ -2554,7 +2554,7 @@ snapshots:
 
   typescript@5.6.3: {}
 
-  undici-types@6.20.0: {}
+  undici-types@7.16.0: {}
 
   unraw@3.0.0: {}
 
@@ -2569,13 +2569,13 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  vite@6.0.11(@types/node@22.10.10)(tsx@4.19.3):
+  vite@6.0.11(@types/node@24.10.7)(tsx@4.19.3):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: 4.32.0
     optionalDependencies:
-      '@types/node': 22.10.10
+      '@types/node': 24.10.7
       fsevents: 2.3.3
       tsx: 4.19.3
 
