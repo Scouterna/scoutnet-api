@@ -11,9 +11,6 @@ jobs:
       contents: read
       id-token: write
 
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-    
     steps:
       - uses: actions/checkout@v4
       - name: Install pnpm
@@ -21,18 +18,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
       - run: pnpm install
 
       # pnpm will run scripts in topological order, ensuring that dependencies
       # are built before dependents. This will also build packages that are
       # irrelevant to the current release, but that's fine.
       - run: pnpm run --recursive build
-      
+
       - if: startsWith(github.event.release.tag_name, 'scoutnet-v')
         working-directory: packages/scoutnet
         run: npm publish --provenance --access public
-      
+
       - if: startsWith(github.event.release.tag_name, 'scoutnet-openapi-v')
         working-directory: packages/scoutnet-openapi
         run: npm publish --provenance --access public
