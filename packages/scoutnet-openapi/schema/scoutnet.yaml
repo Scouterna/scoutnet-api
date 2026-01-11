@@ -44,3 +44,5 @@ paths:
     $ref: ./paths/project_get_participants.yaml
   /project/checkin:
     $ref: ./paths/project_checkin.yaml
+  /project/get/questions:
+    $ref: ./paths/project_forms.yaml

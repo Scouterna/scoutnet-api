@@ -1,0 +1,11 @@
+type: object
+properties:
+  value:
+    type: number
+    description: The choice ID.
+  option:
+    type: string
+    description: The choice text.
+  description:
+    type: string
+    description: The choice description.

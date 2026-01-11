@@ -1,0 +1,25 @@
+type: object
+properties:
+  question:
+    type: string
+    description: The question name.
+  description:
+    type: string
+    description: The question description.
+  tab_id:
+    type: number
+    description: ID of the tab the question belongs to.
+  section_id:
+    type: number
+    description: ID of the section the question belongs to.
+  default_value:
+    type: string
+    description: The default value of the question.
+  type:
+    type: string
+    description: The type of question.
+  choices:
+    type: object
+    additionalProperties:
+      $ref: './question_choice.yaml'
+  

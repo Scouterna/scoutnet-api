@@ -1,0 +1,15 @@
+type: object
+properties:
+  title:
+    type: string
+    description: The title of the form.
+  id:
+    type: number
+    description: The form ID number.
+  form_type:
+    type: string
+    enum: [individual, group]
+    description: The type of form.
+  endpoint_url:
+    type: string
+    description: A direct, authenticated URL to access the full form data.

@@ -1,0 +1,30 @@
+get:
+  summary: Get a list of forms associated with a project
+  operationId: getProjectFormts
+  tags:
+    - project
+  responses:
+    '200':
+      description: |
+        Keys of the response object are form IDs and values are form objects.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              forms:
+                type: object
+                additionalProperties:
+                  $ref: ../components/form.yaml
+              form:
+                $ref: ../components/form.yaml
+              questions:
+                type: object
+                additionalProperties:
+                  $ref: ../components/question.yaml
+              messages:
+                type: array
+                items:
+                  type: string
+    '401':
+      $ref: ../responses/not_authorized.yaml
