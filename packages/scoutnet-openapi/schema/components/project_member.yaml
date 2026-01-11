@@ -73,8 +73,9 @@ properties:
       patrol_name:
         type: string
   questions:
-    type: {}
-    description: NOT YET DOCUMENTED
+    type: object
+    additionalProperties:
+      type: string
   contact_info:
     type: object
     additionalProperties:
