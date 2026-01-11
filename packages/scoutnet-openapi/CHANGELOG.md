@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.3...scoutnet-openapi-v0.3.4) (2026-01-11)
+
+
+### Bug Fixes
+
+* dummy release ([7f4784a](https://github.com/Scouterna/scoutnet-api/commit/7f4784af8a0678a9001b17baafc79edebff1f83f))
+
 ## [0.3.3](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.2...scoutnet-openapi-v0.3.3) (2026-01-11)
 
 

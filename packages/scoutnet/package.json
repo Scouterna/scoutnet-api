@@ -1,8 +1,11 @@
 {
   "name": "@scouterna/scoutnet",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "description": "API client for the Scoutnet API.",
-  "keywords": ["scouterna", "scoutnet"],
+  "keywords": [
+    "scouterna",
+    "scoutnet"
+  ],
   "author": "Malcolm Nihlén <malcolm.nihlen@scouterna.se>",
   "license": "MIT",
   "repository": {
@@ -10,7 +13,13 @@
     "url": "git+https://github.com/Scouterna/scoutnet-api.git",
     "directory": "packages/scoutnet"
   },
-  "files": ["dist", "src", "README.md", "CHANGELOG.md", "package.json"],
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "package.json"
+  ],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
