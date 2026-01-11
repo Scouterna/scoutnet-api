@@ -1,6 +1,6 @@
 {
   "name": "@scouterna/scoutnet-openapi",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "The OpenAPI document for the Scoutnet API, neatly packaged for NPM.",
   "keywords": [
     "scouterna",
