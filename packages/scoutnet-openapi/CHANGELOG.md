@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.2.1...scoutnet-openapi-v0.3.0) (2026-01-11)
+
+
+### Features
+
+* add questions endpoint ([313d5c3](https://github.com/Scouterna/scoutnet-api/commit/313d5c30d9656dd69a2410a3f06e020455cc5839))
+
 ## [0.2.1](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.2.0...scoutnet-openapi-v0.2.1) (2025-07-23)
 
 
