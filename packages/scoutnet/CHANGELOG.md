@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.16](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.15...scoutnet-v0.3.16) (2026-01-11)
+
+
+### Bug Fixes
+
+* dummy release ([6aa4926](https://github.com/Scouterna/scoutnet-api/commit/6aa492658badd5c456a39027a174890bcd088be2))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.3.2
+
 ## [0.3.15](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.14...scoutnet-v0.3.15) (2026-01-11)
 
 
