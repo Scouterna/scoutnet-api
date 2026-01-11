@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.6](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.5...scoutnet-openapi-v0.3.6) (2026-01-11)
+
+
+### Bug Fixes
+
+* add questions type to project_member ([1f9f325](https://github.com/Scouterna/scoutnet-api/commit/1f9f325d0e1d9cb35769433cabfb3abb2de35791))
+
 ## [0.3.5](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.4...scoutnet-openapi-v0.3.5) (2026-01-11)
 
 
