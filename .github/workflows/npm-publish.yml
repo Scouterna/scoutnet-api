@@ -11,9 +11,6 @@ permissions:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -32,8 +29,8 @@ jobs:
 
       - if: startsWith(github.event.release.tag_name, 'scoutnet-v')
         working-directory: packages/scoutnet
-        run: npm publish --provenance --access public
+        run: npm publish
 
       - if: startsWith(github.event.release.tag_name, 'scoutnet-openapi-v')
         working-directory: packages/scoutnet-openapi
-        run: npm publish --provenance --access public
+        run: npm publish
