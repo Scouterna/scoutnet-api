@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.8](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.7...scoutnet-openapi-v0.3.8) (2026-01-12)
+
+
+### Bug Fixes
+
+* add form tabs and sections ([4c7c69f](https://github.com/Scouterna/scoutnet-api/commit/4c7c69f82f8d08d8a466e0ec9a8516ddeb785c13))
+
 ## [0.3.7](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.6...scoutnet-openapi-v0.3.7) (2026-01-12)
 
 
