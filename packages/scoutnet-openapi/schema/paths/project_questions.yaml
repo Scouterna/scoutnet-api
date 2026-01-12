@@ -29,6 +29,15 @@ get:
                 $ref: ../components/form.yaml
               questions:
                 type: object
+                properties:
+                  sections:
+                    type: object
+                    additionalProperties:
+                      $ref: ../components/form_section.yaml
+                  tabs:
+                    type: object
+                    additionalProperties:
+                      $ref: ../components/form_tab.yaml
                 additionalProperties:
                   $ref: ../components/question.yaml
               messages:
