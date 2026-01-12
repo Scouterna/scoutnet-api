@@ -45,4 +45,4 @@ paths:
   /project/checkin:
     $ref: ./paths/project_checkin.yaml
   /project/get/questions:
-    $ref: ./paths/project_forms.yaml
+    $ref: ./paths/project_questions.yaml

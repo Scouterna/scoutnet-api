@@ -3,6 +3,15 @@ get:
   operationId: getProjectFormts
   tags:
     - project
+  parameters:
+    - in: query
+      name: form_id
+      schema:
+        type: integer
+      required: false
+      description: |
+        If provided, details of the specific form will be included in the
+        response.
   responses:
     '200':
       description: |
