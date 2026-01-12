@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.7](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.6...scoutnet-openapi-v0.3.7) (2026-01-12)
+
+
+### Bug Fixes
+
+* add form_id query param ([22ffedb](https://github.com/Scouterna/scoutnet-api/commit/22ffedb94c71611af18c5623672ac00aad97d963))
+
 ## [0.3.6](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.5...scoutnet-openapi-v0.3.6) (2026-01-11)
 
 
