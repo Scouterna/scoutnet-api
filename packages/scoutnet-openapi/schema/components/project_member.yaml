@@ -6,6 +6,10 @@ properties:
     type: boolean
   cancelled:
     type: boolean
+  confirmed:
+    type: boolean
+  confirmed_at:
+    type: string
   member_status:
     type: number
   member_no:
