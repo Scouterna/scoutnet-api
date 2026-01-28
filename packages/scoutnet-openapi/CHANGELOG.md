@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.9](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.8...scoutnet-openapi-v0.3.9) (2026-01-28)
+
+
+### Bug Fixes
+
+* update API spec to align with Scounet 4.24.2 ([bd80513](https://github.com/Scouterna/scoutnet-api/commit/bd8051343497d89caabe331820f9bcd241779143))
+
 ## [0.3.8](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.7...scoutnet-openapi-v0.3.8) (2026-01-12)
 
 
