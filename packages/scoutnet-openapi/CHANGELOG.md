@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.10](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.9...scoutnet-openapi-v0.3.10) (2026-01-30)
+
+
+### Bug Fixes
+
+* make participant question values be nullable ([200de2a](https://github.com/Scouterna/scoutnet-api/commit/200de2adee1108d974d6dfb1653c717177a90bb6))
+
 ## [0.3.9](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.8...scoutnet-openapi-v0.3.9) (2026-01-28)
 
 
