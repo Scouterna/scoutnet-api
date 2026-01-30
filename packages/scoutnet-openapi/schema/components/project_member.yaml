@@ -79,7 +79,7 @@ properties:
   questions:
     type: object
     additionalProperties:
-      type: string
+      type: [string, 'null']
   contact_info:
     type: object
     additionalProperties:
