@@ -1,6 +1,6 @@
 {
   "name": "@scouterna/scoutnet",
-  "version": "0.3.23",
+  "version": "0.3.24",
   "description": "API client for the Scoutnet API.",
   "keywords": [
     "scouterna",
