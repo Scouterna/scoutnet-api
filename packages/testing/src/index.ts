@@ -95,11 +95,32 @@ const client = createClient({
 
 
 
-const result = await client.GET("/organisation/group", {
+// const result = await client.GET("/organisation/group", {
+//   headers: {
+//     Authorization: createAuthorizationHeader({
+//       resourceId: process.env.GET_GROUP_ID,
+//       key: process.env.GET_GROUP_KEY,
+//     }),
+//   }
+// });
+
+// console.log(result);
+
+// if (result.error) {
+//   console.error("Error fetching group information", result.error);
+//   throw new Error("Error fetching group information");
+// }
+
+// console.log(result.data);
+
+
+
+
+const result = await client.GET("/group/memberlist", {
   headers: {
     Authorization: createAuthorizationHeader({
-      resourceId: process.env.GET_GROUP_ID,
-      key: process.env.GET_GROUP_KEY,
+      resourceId: process.env.GET_GROUP_MEMBERLIST_ID,
+      key: process.env.GET_GROUP_MEMBERLIST_KEY,
     }),
   }
 });
@@ -107,8 +128,8 @@ const result = await client.GET("/organisation/group", {
 console.log(result);
 
 if (result.error) {
-  console.error("Error fetching group information", result.error);
-  throw new Error("Error fetching group information");
+  console.error("Error fetching group member list", result.error);
+  throw new Error("Error fetching group member list");
 }
 
 console.log(result.data);
