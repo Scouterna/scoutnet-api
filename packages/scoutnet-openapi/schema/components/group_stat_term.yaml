@@ -1,0 +1,10 @@
+type: object
+properties:
+  sum:
+    type: integer
+  term_id:
+    type: integer
+  term_label:
+    type: string
+  breakdown:
+    $ref: ./group_stat_breakdown.yaml

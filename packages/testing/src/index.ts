@@ -70,25 +70,45 @@ const client = createClient({
 // console.log(result.data);
 
 
-const result = await client.POST("/organisation/update/membership", {
+// const result = await client.POST("/organisation/update/membership", {
+//   headers: {
+//     Authorization: createAuthorizationHeader({
+//       resourceId: process.env.UPDATE_MEMBERSHIP_ID,
+//       key: process.env.UPDATE_MEMBERSHIP_KEY,
+//     }),
+//   },
+//   body: {
+//     3438640: {
+//       status: 'cancelled'
+//     }
+//   }
+// });
+
+// console.log(result);
+
+// if (result.error) {
+//   console.error("Error updating membership", result.error);
+//   throw new Error("Error updating membership");
+// }
+
+// console.log(result.data);
+
+
+
+const result = await client.GET("/organisation/group", {
   headers: {
     Authorization: createAuthorizationHeader({
-      resourceId: process.env.UPDATE_MEMBERSHIP_ID,
-      key: process.env.UPDATE_MEMBERSHIP_KEY,
+      resourceId: process.env.GET_GROUP_ID,
+      key: process.env.GET_GROUP_KEY,
     }),
-  },
-  body: {
-    3438640: {
-      status: 'cancelled'
-    }
   }
 });
 
 console.log(result);
 
 if (result.error) {
-  console.error("Error updating membership", result.error);
-  throw new Error("Error updating membership");
+  console.error("Error fetching group information", result.error);
+  throw new Error("Error fetching group information");
 }
 
 console.log(result.data);

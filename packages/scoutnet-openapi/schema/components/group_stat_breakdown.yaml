@@ -1,0 +1,8 @@
+type: object
+description: |
+  Keyed by age group ID (string), then by sex code
+  (string: 0=unknown, 1=male, 2=female, 3=other), then member count.
+additionalProperties:
+  type: object
+  additionalProperties:
+    type: integer
