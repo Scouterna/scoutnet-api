@@ -58,24 +58,18 @@ const result = await client.GET("/project/get/participants", {
   },
 });
 
-if ('error' in result) {
+if (result.error) {
   // Handle the error properly
   throw new Error(`Request failed with status code ${result.response.status}`);
 }
 
-console.log(data.participants);
-//               ^ Access fully typed properties
+console.log(result.data.participants);
+//                      ^ Access fully typed properties
 ```
 
-There are two important notes to be made here.
-
-First, make sure to use `if ('error' in result)` to check if there is an error
-as in the example above and not just `if (result.error)`. Since Scoutnet returns
-an empty body on errors such as 401 the latter will pass even though there is an
-error.
-
-Second, often times you will receive multiple levels of data. Consider the
-following simplified example of a response:
+Note that often times you will receive multiple levels of data and that when
+those relations are empty, the API might return an empty array instead of an
+object. Consider the following simplified example of a response:
 ```json
 {
   "first_name": "Janne",
@@ -87,8 +81,7 @@ following simplified example of a response:
 ```
 
 As you can see the `contact_info` property contains an object of arbitrary data.
-If we instead imagine there was no contact info the response would look like
-this:
+If instead there was no contact info the response would look like this:
 ```json
 {
   "first_name": "Janne",

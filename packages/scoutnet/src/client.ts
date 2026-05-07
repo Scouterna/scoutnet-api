@@ -24,6 +24,26 @@ export const createClient = ({
     ...clientOptions,
   });
 
+  client.use({
+    async onResponse({ response }) {
+      console.log('res', response.ok, response.headers.get('content-length'))
+      // Scoutnet returns an empty body on for example 401 errors. This causes
+      // openapi-fetch to return the error as `undefined` which is hard to
+      // handle. To work around this, we check if the response is not ok and has
+      // an empty body, and if so, we return an empty JSON object instead.
+      if (!response.ok && response.headers.get("content-length") === "0") {
+        const body = "{}";
+        const headers = new Headers(response.headers);
+        headers.set("content-length", String(body.length));
+        return new Response(body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers,
+        });
+      }
+    },
+  });
+
   return client;
 };
 
