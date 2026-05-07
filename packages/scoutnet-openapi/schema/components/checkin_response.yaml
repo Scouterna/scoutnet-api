@@ -34,5 +34,4 @@ properties:
     type: number
     description: Total number of members that were processed. Unchanged members are counted as well.
   updated_questions:
-    type: {}
     description: NOT YET DOCUMENTED

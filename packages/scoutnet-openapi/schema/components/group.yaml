@@ -51,7 +51,6 @@ properties:
       1: Medlemskap som väntar på godkännande (Membership waiting for approval)
       2: Flytta till väntelista (Move to waiting list)
   badges:
-    type: {}
     description: NOT YET DOCUMENTED
   troops:
     type: object

@@ -8,7 +8,6 @@ properties:
     additionalProperties:
       $ref: './district.yaml'
   corps:
-    type: {}
     description: NOT YET DOCUMENTED
   municipalities:
     type: object
