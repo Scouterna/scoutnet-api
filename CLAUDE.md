@@ -55,6 +55,7 @@ Conventions to follow when adding endpoints:
 - Nullable fields use `type: [integer, 'null']` (OpenAPI 3.1 style), not `nullable: true`.
 - If a field should only appear in responses (e.g. server-assigned IDs), create a separate `*_response.yaml` component that `allOf`-extends the base component and adds the extra fields. Do not use `readOnly: true` — the generated client does not remove `readOnly` fields from request types.
 - The schema is linted with [vacuum](https://quobix.com/vacuum/) on PRs. Disabled rules are in `vacuum-ruleset.yaml`.
+- Do not document authentication-related query parameters (e.g. `auth_body_type`, `auth_body_id`) in path files.
 
 ## Releases
 

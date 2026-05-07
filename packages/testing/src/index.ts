@@ -42,20 +42,44 @@ const client = createClient({
 
 // console.log(result.data);
 
-const result = await client.POST("/organisation/register/member", {
+// const result = await client.POST("/organisation/register/member", {
+//   headers: {
+//     Authorization: createAuthorizationHeader({
+//       resourceId: process.env.REGISTER_MEMBER_ID,
+//       key: process.env.REGISTER_MEMBER_KEY,
+//     }),
+//   },
+//   body: {
+//     profile: {
+//       first_name: "Test",
+//       last_name: "Testsson",
+//       ssno: "9901",
+//       sex: 0,
+//       date_of_birth: "1890-01-01"
+//     }
+//   }
+// });
+
+// console.log(result);
+
+// if (result.error) {
+//   console.error("Error registering member", result.error);
+//   throw new Error("Error registering member");
+// }
+
+// console.log(result.data);
+
+
+const result = await client.POST("/organisation/update/membership", {
   headers: {
     Authorization: createAuthorizationHeader({
-      resourceId: process.env.REGISTER_MEMBERS_ID,
-      key: process.env.REGISTER_MEMBERS_KEY,
+      resourceId: process.env.UPDATE_MEMBERSHIP_ID,
+      key: process.env.UPDATE_MEMBERSHIP_KEY,
     }),
   },
   body: {
-    profile: {
-      first_name: "Test",
-      last_name: "Testsson",
-      ssno: "9901",
-      sex: 0,
-      date_of_birth: "1890-01-01"
+    3438640: {
+      status: 'cancelled'
     }
   }
 });
@@ -63,8 +87,8 @@ const result = await client.POST("/organisation/register/member", {
 console.log(result);
 
 if (result.error) {
-  console.error("Error registering member", result.error);
-  throw new Error("Error registering member");
+  console.error("Error updating membership", result.error);
+  throw new Error("Error updating membership");
 }
 
 console.log(result.data);

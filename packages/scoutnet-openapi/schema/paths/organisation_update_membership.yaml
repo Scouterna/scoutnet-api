@@ -1,0 +1,59 @@
+post:
+  summary: Update group membership status, troop, or patrol
+  description: |
+    Update one or more group memberships in a single request. A common use
+    case is moving a member from the waiting list into a troop/patrol and
+    confirming their membership status.
+
+    Any error causes the entire request to be rejected.
+  operationId: updateGroupMembership
+  tags:
+    - organisation
+  requestBody:
+    required: true
+    description: |
+      An object where the keys are member numbers and the values are objects
+      describing the membership fields to update.
+    content:
+      application/json:
+        schema:
+          type: object
+          additionalProperties:
+            type: object
+            required:
+              - status
+            properties:
+              status:
+                type: string
+                enum: [confirmed, waiting, cancelled]
+              troop_id:
+                type: integer
+              patrol_id:
+                type: integer
+  responses:
+    '200':
+      description: All memberships updated successfully.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              success:
+                type: boolean
+              updated:
+                type: array
+                items:
+                  type: integer
+                description: Member numbers that were updated.
+    '400':
+      description: |
+        One or more members failed validation. The entire request is rejected.
+        Keys are member numbers; values are error message strings.
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties:
+              type: string
+    '401':
+      $ref: ../responses/not_authorized.yaml
