@@ -48,6 +48,8 @@ paths:
     $ref: ./paths/project_checkin.yaml
   /project/get/questions:
     $ref: ./paths/project_questions.yaml
+  /organisation/group:
+    $ref: ./paths/organisation_group.yaml
   /organisation/register/member:
     $ref: ./paths/organisation_register_member.yaml
   /organisation/update/membership:

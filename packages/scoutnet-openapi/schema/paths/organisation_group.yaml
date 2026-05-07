@@ -1,0 +1,63 @@
+get:
+  summary: Get information about the authenticated group
+  description: Returns basic information and statistics about the authenticated group and its primary leader.
+  operationId: getOrganisationGroup
+  tags:
+    - organisation
+  responses:
+    '200':
+      description: Group information.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              Group:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  membercount:
+                    type: integer
+                  rolecount:
+                    type: integer
+                  waitingcount:
+                    type: integer
+                  group_email:
+                    type: [boolean, 'null']
+                  email:
+                    type: string
+                    format: email
+                  description:
+                    type: string
+                  stats:
+                    type: [object, 'null']
+                    properties:
+                      active:
+                        type: object
+                        properties:
+                          sum:
+                            type: integer
+                          breakdown:
+                            $ref: ../components/group_stat_breakdown.yaml
+                      active_paid:
+                        $ref: ../components/group_stat_term.yaml
+                      active_paid_previous:
+                        $ref: ../components/group_stat_term.yaml
+                      below_26:
+                        type: integer
+                        description: Count of active members aged 26 or under.
+                      generated:
+                        type: string
+                        format: date-time
+                      active_troops:
+                        type: integer
+              Leader:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  contactdetails:
+                    type: string
+    '401':
+      $ref: ../responses/not_authorized.yaml
