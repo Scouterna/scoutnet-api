@@ -50,3 +50,5 @@ paths:
     $ref: ./paths/project_questions.yaml
   /organisation/register/member:
     $ref: ./paths/organisation_register_member.yaml
+  /organisation/update/membership:
+    $ref: ./paths/organisation_update_membership.yaml
