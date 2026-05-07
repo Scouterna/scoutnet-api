@@ -4,15 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx --env-file .env src/index.ts",
+    "dev": "node --env-file .env src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
-    "@scouterna/scoutnet": "workspace:^",
-    "tsx": "^4.19.3"
+    "@scouterna/scoutnet": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "^24.10.7"
