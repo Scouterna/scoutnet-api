@@ -1,0 +1,38 @@
+get:
+  summary: Get projects for the authenticated group
+  operationId: getOrganisationProjects
+  tags:
+    - organisation
+  responses:
+    '200':
+      description: List of projects associated with the authenticated group.
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                Project:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    starts:
+                      type: string
+                      format: date-time
+                    ends:
+                      type: string
+                      format: date-time
+                    description:
+                      type: string
+                    updated:
+                      type: string
+                      format: date-time
+                    min_age:
+                      type: integer
+                    max_age:
+                      type: integer
+                      description: Maximum age for participants. 0 means no limit.
+    '401':
+      $ref: ../responses/not_authorized.yaml

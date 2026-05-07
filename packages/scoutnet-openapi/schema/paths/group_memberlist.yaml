@@ -1,0 +1,95 @@
+get:
+  summary: Get a detailed list of all group members
+  description: |
+    Returns a full member list for the authenticated group. By default returns
+    active members; use `waiting` and/or `awaiting_approval` query parameters to
+    include members in those states instead.
+  operationId: getGroupMemberlist
+  tags:
+    - group
+  parameters:
+    - in: query
+      name: waiting
+      schema:
+        type: integer
+        enum: [1]
+      required: false
+      description: Include members on the waiting list.
+    - in: query
+      name: awaiting_approval
+      schema:
+        type: integer
+        enum: [1]
+      required: false
+      description: Include members awaiting approval.
+  responses:
+    '200':
+      description: Member list with translated labels.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: object
+                description: Keyed by member number.
+                additionalProperties:
+                  type: object
+                  properties:
+                    member_no:
+                      $ref: ../components/memberlist_field.yaml
+                    first_name:
+                      $ref: ../components/memberlist_field.yaml
+                    last_name:
+                      $ref: ../components/memberlist_field.yaml
+                    ssno:
+                      $ref: ../components/memberlist_field.yaml
+                    date_of_birth:
+                      $ref: ../components/memberlist_field.yaml
+                    status:
+                      $ref: ../components/memberlist_field.yaml
+                    created_at:
+                      $ref: ../components/memberlist_field.yaml
+                    confirmed_at:
+                      $ref: ../components/memberlist_field.yaml
+                    group:
+                      $ref: ../components/memberlist_field.yaml
+                    unit:
+                      $ref: ../components/memberlist_field.yaml
+                    unit_type:
+                      $ref: ../components/memberlist_field.yaml
+                    sex:
+                      $ref: ../components/memberlist_field.yaml
+                    address_1:
+                      $ref: ../components/memberlist_field.yaml
+                    postcode:
+                      $ref: ../components/memberlist_field.yaml
+                    town:
+                      $ref: ../components/memberlist_field.yaml
+                    country:
+                      $ref: ../components/memberlist_field.yaml
+                    email:
+                      $ref: ../components/memberlist_field.yaml
+                    prev_term:
+                      $ref: ../components/memberlist_field.yaml
+                    current_term:
+                      $ref: ../components/memberlist_field.yaml
+                    current_term_due_date:
+                      $ref: ../components/memberlist_field.yaml
+                    kid:
+                      $ref: ../components/memberlist_field.yaml
+                    roles:
+                      $ref: ../components/memberlist_field.yaml
+                    waiting_since:
+                      $ref: ../components/memberlist_field.yaml
+                    awaiting_approval:
+                      $ref: ../components/memberlist_field.yaml
+                  additionalProperties:
+                    $ref: ../components/memberlist_field.yaml
+              labels:
+                type: object
+                description: Translated column labels keyed by field name.
+                additionalProperties:
+                  type: string
+    '401':
+      $ref: ../responses/not_authorized.yaml
