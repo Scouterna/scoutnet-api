@@ -1,0 +1,145 @@
+post:
+  summary: Register a group member on the waiting list
+  description: |
+    Validation rules and required fields are determined by the system
+    configuration — refer to the system UI for current requirements.
+  operationId: registerGroupMember
+  tags:
+    - organisation
+  parameters:
+    - in: query
+      name: redirect
+      schema:
+        type: string
+      required: false
+      description: |
+        An internal route name. When provided the system redirects to this
+        route on success instead of returning the registered values.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            profile:
+              $ref: ../components/register_member_profile.yaml
+            membership:
+              $ref: ../components/register_member_membership.yaml
+            registration_preferences:
+              type: object
+              properties:
+                troop_id:
+                  type: array
+                  items:
+                    type: integer
+                section_id:
+                  type: array
+                  items:
+                    type: integer
+            address_list:
+              type: object
+              properties:
+                addresses:
+                  type: object
+                  additionalProperties:
+                    $ref: ../components/register_address_entry.yaml
+            contact_list:
+              type: object
+              properties:
+                contacts:
+                  type: object
+                  additionalProperties:
+                    type: object
+                    properties:
+                      contact_type_id:
+                        type: string
+                      details:
+                        type: string
+            custom_data:
+              type: object
+              additionalProperties:
+                type: string
+              description: Custom field answers, keyed by field ID.
+  responses:
+    '200':
+      description: Member successfully registered.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              profile:
+                $ref: ../components/register_member_profile_response.yaml
+              membership:
+                $ref: ../components/register_member_membership.yaml
+              registration_preferences:
+                type: object
+                properties:
+                  troop_id:
+                    type: array
+                    items:
+                      type: integer
+                  section_id:
+                    type: array
+                    items:
+                      type: integer
+              address_list:
+                type: object
+                properties:
+                  addresses:
+                    type: object
+                    additionalProperties:
+                      $ref: ../components/register_address_entry.yaml
+              contact_list:
+                type: object
+                properties:
+                  contacts:
+                    type: object
+                    additionalProperties:
+                      type: object
+                      properties:
+                        contact_type_id:
+                          type: string
+                        details:
+                          type: string
+              custom_data:
+                type: object
+                additionalProperties:
+                  type: string
+    '400':
+      description: |
+        Validation errors. Profile errors are an array of error objects. Nested
+        errors (e.g. address_list) are objects keyed by sub-field name.
+      content:
+        application/json:
+          schema:
+            type: object
+            additionalProperties:
+              oneOf:
+                - type: array
+                  items:
+                    type: object
+                    properties:
+                      key:
+                        type: string
+                      subkey:
+                        type: string
+                      value: {}
+                      msg:
+                        type: string
+                - type: object
+                  additionalProperties:
+                    type: object
+                    additionalProperties:
+                      type: object
+                      properties:
+                        key:
+                          type: string
+                        subkey:
+                          type: string
+                        value: {}
+                        msg:
+                          type: string
+    '401':
+      $ref: ../responses/not_authorized.yaml

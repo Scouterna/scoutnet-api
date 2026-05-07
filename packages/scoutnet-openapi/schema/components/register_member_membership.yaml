@@ -1,0 +1,12 @@
+type: object
+properties:
+  status:
+    type: integer
+    enum: [1, 2, 4]
+    description: 1 = waiting list, 2 = pending approval, 4 = approve in group
+  troop_id:
+    type: [integer, 'null']
+  patrol_id:
+    type: [integer, 'null']
+  feegroup_id:
+    type: [integer, 'null']

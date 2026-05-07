@@ -21,21 +21,52 @@ if (!process.env.LIST_BODIES_KEY) throw new Error("Missing LIST_BODIES_KEY");
 // console.log(data)
 
 const client = createClient({
-  // baseUrl: "https://scoutnet.se/api",
+  baseUrl: "https://s1.test.custard.no/api",
 });
 
-const result = await client.GET("/project/get/participants", {
+// const result = await client.GET("/project/get/participants", {
+//   headers: {
+//     Authorization: createAuthorizationHeader({
+//       resourceId: process.env.LIST_BODIES_ID,
+//       key: process.env.LIST_BODIES_KEY,
+//     }),
+//   },
+// });
+
+// console.log(result);
+
+// if (result.error) {
+//   console.error("Error fetching body key list", result.error);
+//   throw new Error("Error fetching body key list");
+// }
+
+// console.log(result.data);
+
+const result = await client.POST("/organisation/register/member", {
   headers: {
     Authorization: createAuthorizationHeader({
-      resourceId: process.env.LIST_BODIES_ID,
-      key: process.env.LIST_BODIES_KEY,
+      resourceId: process.env.REGISTER_MEMBERS_ID,
+      key: process.env.REGISTER_MEMBERS_KEY,
     }),
   },
+  body: {
+    profile: {
+      first_name: "Test",
+      last_name: "Testsson",
+      ssno: "9901",
+      sex: 0,
+      date_of_birth: "1890-01-01"
+    }
+  }
 });
 
-if ("error" in result) {
-  console.error("Error fetching body key list", result.error);
-  throw new Error("Error fetching body key list");
+console.log(result);
+
+if (result.error) {
+  console.error("Error registering member", result.error);
+  throw new Error("Error registering member");
 }
 
 console.log(result.data);
+
+

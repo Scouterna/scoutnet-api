@@ -1,0 +1,14 @@
+type: object
+properties:
+  address_type:
+    type: string
+  address_line1:
+    type: string
+  address_line2:
+    type: string
+  country_code:
+    type: string
+  zip_code:
+    type: string
+  zip_name:
+    type: string
