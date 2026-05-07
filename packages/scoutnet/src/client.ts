@@ -27,13 +27,7 @@ export const createClient = ({
   return client;
 };
 
-const base64encode = (data: string) => {
-  if (typeof window === "undefined") {
-    return Buffer.from(data).toString("base64");
-  }
-
-  return window.btoa(data);
-};
+const base64encode = (data: string) => btoa(data);
 
 /**
  * Creates an authorization header for the Scoutnet API.

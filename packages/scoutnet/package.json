@@ -2,10 +2,7 @@
   "name": "@scouterna/scoutnet",
   "version": "0.3.24",
   "description": "API client for the Scoutnet API.",
-  "keywords": [
-    "scouterna",
-    "scoutnet"
-  ],
+  "keywords": ["scouterna", "scoutnet"],
   "author": "Malcolm Nihlén <malcolm.nihlen@scouterna.se>",
   "license": "MIT",
   "repository": {
@@ -13,30 +10,23 @@
     "url": "git+https://github.com/Scouterna/scoutnet-api.git",
     "directory": "packages/scoutnet"
   },
-  "files": [
-    "dist",
-    "src",
-    "README.md",
-    "CHANGELOG.md",
-    "package.json"
-  ],
+  "files": ["dist", "src", "README.md", "CHANGELOG.md", "package.json"],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "pnpm run build:types && pnpm run build:format && pnpm run build:typescript",
-    "build:types": "node --experimental-strip-types generate-types.ts",
-    "build:format": "biome format --write ./src/generated/api-types.ts",
+    "build": "pnpm run build:types && pnpm run build:typescript",
+    "build:types": "node generate-types.ts",
     "build:typescript": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@types/node": "^24.10.7",
-    "openapi-typescript": "^7.6.0",
-    "typescript": "~5.6.2",
+    "openapi-typescript": "^7.13.0",
+    "typescript": "~6.0.3",
     "@scouterna/scoutnet-openapi": "workspace:^"
   },
   "dependencies": {
-    "openapi-fetch": "^0.13.4"
+    "openapi-fetch": "^0.17.0"
   }
 }
