@@ -13,9 +13,6 @@ put:
       application/json:
         schema:
           type: object
-          propertyNames:
-            pattern: '^[0-9]+$'
-            description: A valid member ID
           additionalProperties:
             $ref: ../components/checkin.yaml
   responses:

@@ -17,6 +17,9 @@ post:
         route on success instead of returning the registered values.
   requestBody:
     required: true
+    description: |
+      Member registration data including profile, membership, and optional
+      address and contact information.
     content:
       application/json:
         schema:
