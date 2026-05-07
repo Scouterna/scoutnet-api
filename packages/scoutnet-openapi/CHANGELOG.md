@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.10...scoutnet-openapi-v0.4.0) (2026-05-07)
+
+
+### Features
+
+* add documentation for get group information endpoint ([29ea7f3](https://github.com/Scouterna/scoutnet-api/commit/29ea7f39ee0bd48d74067f2cc9a3aeae63d4f971))
+* add documentation for get list of members ([3510cd3](https://github.com/Scouterna/scoutnet-api/commit/3510cd3d2def33d337ec36adca23d0c28a359646))
+* add documentation for register member endpoint ([4124c42](https://github.com/Scouterna/scoutnet-api/commit/4124c42942fac74e308bca02a6c541e116349f49))
+* add documentation for update membership endpoint ([cb730ef](https://github.com/Scouterna/scoutnet-api/commit/cb730efd9fe8d0c99f4c7b7630b821adc4fe3b19))
+
 ## [0.3.10](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.9...scoutnet-openapi-v0.3.10) (2026-01-30)
 
 

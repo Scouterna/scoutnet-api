@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.25](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.24...scoutnet-v0.3.25) (2026-05-07)
+
+
+### Bug Fixes
+
+* make error responses always contain error object ([ab082c9](https://github.com/Scouterna/scoutnet-api/commit/ab082c93153d3aa5b0816b6bbe2ab0855342388c))
+* update dependencies ([0f113d6](https://github.com/Scouterna/scoutnet-api/commit/0f113d69b5410f95f6d475f7d7c08eeca03cec5f))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.4.0
+
 ## [0.3.24](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.23...scoutnet-v0.3.24) (2026-01-30)
 
 
