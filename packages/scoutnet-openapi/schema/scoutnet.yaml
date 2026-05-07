@@ -18,6 +18,8 @@ info:
 tags:
   - name: project
     description: Endpoints related to "arrangemang"
+  - name: organisation
+    description: Endpoints scoped to a specific organisation
   - name: global
     description: Endpoints that do not belong to a specific type of resource
 servers:
@@ -46,3 +48,5 @@ paths:
     $ref: ./paths/project_checkin.yaml
   /project/get/questions:
     $ref: ./paths/project_questions.yaml
+  /organisation/register/member:
+    $ref: ./paths/organisation_register_member.yaml

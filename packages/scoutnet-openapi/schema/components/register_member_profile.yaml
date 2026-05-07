@@ -1,0 +1,28 @@
+type: object
+properties:
+  first_name:
+    type: string
+  last_name:
+    type: string
+  sex:
+    type: [integer, 'null']
+    enum: [0, 1, 2, 3, null]
+    description: 0 = unknown, 1 = male, 2 = female, 3 = other
+  email:
+    type: string
+    format: email
+  date_of_birth:
+    type: string
+    format: date
+  ssno:
+    type: string
+  note:
+    type: string
+  nick_name:
+    type: [string, 'null']
+  newsletter:
+    type: [string, 'null']
+  magazine:
+    type: [string, 'null']
+  force_police_check:
+    type: [string, 'null']

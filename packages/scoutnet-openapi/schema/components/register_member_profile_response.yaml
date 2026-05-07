@@ -1,0 +1,6 @@
+allOf:
+  - $ref: ./register_member_profile.yaml
+  - type: object
+    properties:
+      id:
+        type: [integer, 'null']
