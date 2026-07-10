@@ -2,6 +2,22 @@ type: object
 properties:
   checked_in:
     type: boolean
+  pc_details:
+    type: object
+    properties:
+      required:
+        type: boolean
+      valid:
+        type: boolean
+      shown:
+        type: string
+      missing:
+        type: boolean
+  pc_courses:
+    type: object
+    description: Course ID to completion date, or null if not completed. See the `pc_courses` map in the getProjectParticipants response for the course ID to name lookup.
+    additionalProperties:
+      type: [string, 'null']
   attended:
     type: boolean
   cancelled:

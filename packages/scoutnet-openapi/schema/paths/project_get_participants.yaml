@@ -21,5 +21,10 @@ get:
                   $ref: ../components/project_member.yaml
               labels:
                 $ref: ../components/project_get_participants_labels.yaml
+              pc_courses:
+                type: object
+                description: 'Course ID to course name, e.g. `{ "89": "Trygga möten" }`. Cross-reference with the `pc_courses` map on each project member to get a member''s completion date per course.'
+                additionalProperties:
+                  type: string
     '401':
       $ref: ../responses/not_authorized.yaml
