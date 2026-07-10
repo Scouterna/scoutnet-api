@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.4.0...scoutnet-openapi-v0.4.1) (2026-07-10)
+
+
+### Bug Fixes
+
+* add missing fields for Trygga Möten and belastningsregistersutdrag to project members ([8feb9af](https://github.com/Scouterna/scoutnet-api/commit/8feb9af2921187394400566329b76c03691fa7c9))
+
 ## [0.4.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.3.10...scoutnet-openapi-v0.4.0) (2026-05-07)
 
 
