@@ -17,7 +17,10 @@ properties:
     description: The default value of the question.
   type:
     type: string
-    description: The type of question.
+    description: |
+      The type of question. Known values are `text`, `number`, `boolean`,
+      `choice` and `other_unsupported_by_api`.
+    example: choice
   choices:
     type: object
     additionalProperties:

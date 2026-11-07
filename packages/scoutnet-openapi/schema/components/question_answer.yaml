@@ -1,0 +1,14 @@
+type: object
+required:
+  - value
+properties:
+  value:
+    type: string
+    description: |
+      The answer. Boolean questions (e.g. checkboxes) take "1" or "0". Choice
+      questions (e.g. dropdowns, radios) take the choice's `value`, as listed
+      by `/project/get/questions`.
+    example: "301"
+  subvalue:
+    type: [string, 'null']
+    description: Secondary value, only used by some question types.

@@ -93,9 +93,15 @@ properties:
       patrol_name:
         type: string
   questions:
-    type: object
+    type: [object, array]
+    description: |
+      Answers keyed by question ID, for questions marked as "include in API".
+      Multiple choice answers are arrays of choice values. An empty array is
+      returned when there are no answers.
     additionalProperties:
-      type: [string, 'null']
+      type: [string, array, 'null']
+      items:
+        type: string
   contact_info:
     type: object
     additionalProperties:

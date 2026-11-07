@@ -3,7 +3,10 @@ properties:
   checked_in:
     type: number
     enum: [0, 1]
-    description: Set to 1 to mark the participant as checked in, 0 to mark as checked out.
+    description: |
+      Set to 1 to mark the participant as checked in, 0 to mark as checked out.
+      Omit to leave the check-in state unchanged, e.g. when only updating
+      question answers.
   comment:
     example: "Checked in by Scoutin checkin system"
     type: string
@@ -11,5 +14,16 @@ properties:
   attended:
     type: number
     enum: [0, 1]
-    default: 1
-    description: Only applicable when checking out. Set to 1 to mark the participant as attended, 0 to mark as not attended. Default is 1.
+    description: |
+      Only applicable when checking out. Set to 1 to mark the participant as
+      attended, 0 to mark as not attended. Defaults to 1. When checking in,
+      attended is always set to 1 and cannot be overridden.
+  questions:
+    type: object
+    description: |
+      Answers to update, keyed by question ID. Questions must exist on the
+      project and be marked as accessible by the API. Validation is light:
+      there is no check for hidden or required fields. Not all question types
+      are supported.
+    additionalProperties:
+      $ref: ./question_answer.yaml

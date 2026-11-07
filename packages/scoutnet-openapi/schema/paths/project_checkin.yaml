@@ -1,6 +1,11 @@
 put:
-  summary: Update the check-in state of participant(s) on the project
-  description: Update the check-in state of participant(s) on the project.
+  summary: Update the check-in state and question answers of participant(s) on the project
+  description: |
+    Update the check-in state of participant(s) on the project, and/or their
+    answers to project questions. Check-in and answers can be sent together,
+    or answers can be sent without changing the check-in state.
+
+    Any error causes the entire request to fail with no changes committed.
   operationId: updateCheckin
   tags:
     - project
@@ -15,6 +20,14 @@ put:
           type: object
           additionalProperties:
             $ref: ../components/checkin.yaml
+        example:
+          '3000616':
+            checked_in: 1
+            questions:
+              '499':
+                value: '301'
+              '815':
+                value: '15:00'
   responses:
     '200':
       description: A summary of the check-in operation.
@@ -22,5 +35,30 @@ put:
         application/json:
           schema:
             $ref: ../components/checkin_response.yaml
+    '400':
+      description: |
+        The request was rejected and no changes were committed. Either `error`
+        is set, or `message` is set together with per-answer `errors`.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: 'Server error! Message: Question with ID 123 is not a valid API accessible question for this project (Processing member: 3000616)'
+              message:
+                type: string
+                example: Saving answers failed - all transactions aborted
+              errors:
+                type: object
+                description: Error messages keyed by member ID and then by question ID.
+                additionalProperties:
+                  type: object
+                  additionalProperties:
+                    type: string
+                example:
+                  '3000616':
+                    '499': Invalid choice (123) - please check available options for this question
     '401':
       $ref: ../responses/not_authorized.yaml

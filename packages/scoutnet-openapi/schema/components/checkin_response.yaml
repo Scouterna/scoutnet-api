@@ -34,4 +34,23 @@ properties:
     type: number
     description: Total number of members that were processed. Unchanged members are counted as well.
   updated_questions:
-    description: NOT YET DOCUMENTED
+    type: object
+    description: |
+      Details of question answer updates, keyed by member ID and then by
+      question ID. A question with a `null` value was not updated, most likely
+      because the new value was the same as the existing one.
+    additionalProperties:
+      type: object
+      additionalProperties:
+        type: [object, 'null']
+        properties:
+          id:
+            type: number
+            description: ID of the stored answer.
+          action:
+            type: string
+            example: updated
+          original_values:
+            $ref: ./question_answer.yaml
+          new_values:
+            $ref: ./question_answer.yaml
