@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.27](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.26...scoutnet-v0.3.27) (2026-11-07)
+
+
+### Bug Fixes
+
+* remove overly verbose logging call ([2b7002d](https://github.com/Scouterna/scoutnet-api/commit/2b7002d192591f2e2aeb7127ac98fb841cfd03bb))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * devDependencies
+    * @scouterna/scoutnet-openapi bumped to 0.5.0
+
 ## [0.3.26](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-v0.3.25...scoutnet-v0.3.26) (2026-07-10)
 
 

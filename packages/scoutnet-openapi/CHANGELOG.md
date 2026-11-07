@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.4.1...scoutnet-openapi-v0.5.0) (2026-11-07)
+
+
+### Features
+
+* document question answer updates on project checkin ([db47c75](https://github.com/Scouterna/scoutnet-api/commit/db47c753400ccd84c72473196f18e8bfb204d823))
+
 ## [0.4.1](https://github.com/Scouterna/scoutnet-api/compare/scoutnet-openapi-v0.4.0...scoutnet-openapi-v0.4.1) (2026-07-10)
 
 
